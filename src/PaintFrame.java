@@ -8,7 +8,7 @@ import java.awt.image.BufferedImage;
 import javax.swing.SwingConstants;
 import javax.swing.JSlider;
 
-public class PainterFrame123 extends JFrame
+public class PaintFrame extends JFrame
 {
 	private DrawPanel drawpanel;//宣告一個畫布
 	private JLabel statusBar,slidersize;//狀態列
@@ -33,7 +33,7 @@ public class PainterFrame123 extends JFrame
 	
 	
     /*******************************主畫面的排列*************************************/	
-	public PainterFrame123()
+	public PaintFrame()
 	{
 		super("小畫家");
 		
@@ -258,8 +258,8 @@ public class PainterFrame123 extends JFrame
 			if (event.getSource() == gradient)
 			{
 				
-				color1=JColorChooser.showDialog(PainterFrame123.this,"選擇顏色一",color1);
-				color2=JColorChooser.showDialog(PainterFrame123.this,"選擇顏色二",color2);
+				color1=JColorChooser.showDialog(PaintFrame.this,"選擇顏色一",color1);
+				color2=JColorChooser.showDialog(PaintFrame.this,"選擇顏色二",color2);
 				Ctype=1;
 				
 				if(color1==null||color2==null)
@@ -267,7 +267,7 @@ public class PainterFrame123 extends JFrame
 			}
 			if (event.getSource() == back)
 			{
-				backcolor = JColorChooser.showDialog(PainterFrame123.this,"Choose a color", backcolor);
+				backcolor = JColorChooser.showDialog(PaintFrame.this,"Choose a color", backcolor);
 				if (backcolor == null)
 				{
 					backcolor = Color.WHITE;
